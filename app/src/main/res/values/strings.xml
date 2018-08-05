@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Slipnotes</string>
+    <string name="search_hint">Search</string>
+    <string name="instructions">
+        \u0020\u0020+ - New note
+        \n\nTap - View or edit
+        \n\nHold - Select to delete</string>
+</resources>

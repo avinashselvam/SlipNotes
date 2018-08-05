@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity"
+    android:id="@+id/cl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray3"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:background="@color/white">
+
+            <ImageButton
+                android:id="@+id/search_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/blue"
+                android:background="@color/white"
+                android:padding="18dp"
+                android:layout_gravity="center"
+                android:scaleX="-1"
+                app:srcCompat="@drawable/ic_search_black_24dp" />
+
+            <EditText
+                android:id="@+id/search_box"
+                android:layout_toRightOf="@+id/search_button"
+                android:layout_toLeftOf="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:hint="@string/search_hint"
+                android:visibility="invisible"
+                android:singleLine="true"
+                android:textSize="21sp"
+                android:imeOptions="actionSearch"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColorHint="@color/gray2"
+                android:background="@android:color/transparent"
+                android:textCursorDrawable="@drawable/color_cursor" />
+
+            <ImageButton
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:visibility="invisible"
+                android:tint="@color/blue"
+                android:background="@color/white"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:id="@+id/delete"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray3"/>
+
+
+        <ListView
+            android:id="@+id/search_results"
+            android:divider="@color/gray3"
+            android:dividerHeight="1dp"
+            android:background="#CCBFBFBF"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+        <ListView
+            android:id="@+id/notesView"
+            android:divider="@color/gray3"
+            android:dividerHeight="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/search">
+        </ListView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/instructions"
+            android:textAlignment="center"
+            android:textColor="@color/gray2"
+            android:alpha="0.9"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:visibility="gone"
+            android:id="@+id/instructions"/>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_add_black_24dp"
+        app:backgroundTint="@color/blue"
+        app:borderWidth="0dp" />
+
+</android.support.design.widget.CoordinatorLayout>

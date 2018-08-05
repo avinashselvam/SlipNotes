@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="12dp"
+    android:background="@color/white"
+    android:id="@+id/eachNote">
+
+        <TextView android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wed, 27 Aug . 7:30 pm"
+            android:focusable="false"
+        style="@style/time" />
+
+        <TextView android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:focusable="false"
+        android:text="Hello World!"
+        style="@style/title" />
+
+        <TextView android:id="@+id/regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:focusable="false"
+        android:text="Lorem ipsum vdolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ..."
+        style="@style/regular" />
+
+</LinearLayout>
+
